@@ -3,7 +3,7 @@ const pageHeading = document.getElementById('page-heading');
 let currentPageNumber = 1;
 
 function getIssues() {
-  fetch(`https://api.github.com/repositories/1296269/issues?page=${currentPageNumber}&per_page=`)
+  fetch(`https://api.github.com/repositories/1296269/issues?page=${currentPageNumber}&per_page=5`)
     .then(response => response.json())
     .then(issues => {
       issuesList.innerHTML = '';
